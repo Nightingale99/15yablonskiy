@@ -1,0 +1,136 @@
+@font-face {
+    font-family: "TTLakes";
+    src: local("TTLakes-Regular"),
+      url("./fonts/TTLakes-Regular.woff2") format("woff2"),
+      url("./fonts/TTLakes-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #F8F8F8;
+}
+
+.brand-header{
+  padding: 10px;
+  background-color: white;
+}
+
+.brand-title__text{
+  margin: 0;
+  font-family: "TTLakes";
+  font-size: 16px;
+  font-weight: 400px;
+  line-height: 24px;
+  letter-spacing: -0.20000000298023224px;
+  text-align: left;
+  color: #7E7E82;
+  text-transform: uppercase;
+}
+
+.swiper-container{
+  overflow: hidden;
+  width: 100%;
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.swiper-slide{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: white;
+  width: 240px !important;
+  height: 72px;
+  border: 1px solid #EAEAEA;
+  border-radius: 6px;
+}
+
+.swiper-pagination-bullet{
+  width: 12px;
+  height: 12px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #B5B6BC !important; /* Замените этот цвет на желаемый темно-серый цвет */
+}
+
+#swiper-pagination{
+  top: 30%;
+}
+
+.swiper-container__more-brands{
+  display:none;
+}
+
+.opened{
+  transform: translateY(32px);
+  transition: 0.5s;
+}
+
+.opened::before{
+  content: url(./img/expand-alternate.svg) !important;
+}
+
+@media(min-width: 768px){
+  .swiper-wrapper{
+    display: grid;
+    row-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 0;
+  }
+  
+  .tablet-none{
+    display: none;
+  }
+
+  .swiper-container__more-brands{
+    display: inline-block;
+    padding-bottom: 100px;
+    position: relative;
+    font-family: "TTLakes";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.20000000298023224px;
+    text-align: left;
+    color: #1B1C21;
+    margin-top: 20px;
+    margin-left: 10px;
+    text-decoration: none;
+    transition: 1s;
+    border: none;
+    background: none;
+    color: none;
+  }
+
+  .swiper-container__more-brands:hover{
+    text-decoration: underline;
+  }
+
+  .swiper-container__more-brands::before{
+    content: url(./img/expand.svg);
+    position: relative;
+    top: 5px;
+  }
+
+}
+
+@media(min-width: 1120px){
+  .swiper-wrapper{
+    display: grid;
+    row-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+  }
+}
