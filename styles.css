@@ -66,7 +66,7 @@ body{
 }
 
 #swiper-pagination{
-  top: 40%;
+  top: 20%;
 }
 
 .swiper-container__more-brands{
@@ -75,7 +75,6 @@ body{
 
 .opened{
   transform: translateY(32px);
-  transition: 0.5s;
 }
 
 .opened::before{
@@ -108,7 +107,6 @@ body{
     margin-top: 20px;
     margin-left: 10px;
     text-decoration: none;
-    transition: 1s;
     border: none;
     background: none;
     color: none;
